@@ -1,2 +1,1 @@
-# Algoritmos-Analise-Combinatoria
-Algorítmos para realização da avaliação de AED II
+# Algoritmos para prova de AED 2
