@@ -5,7 +5,7 @@
 double fatorial(double n)
 {
     double result = 1;
-    for (double i = n; i > 1; i--)
+    for (int i = n; i > 1; i--)
         result *= i;
     return result;
 }
@@ -19,7 +19,7 @@ double permutacao_simples(double n)
 double permutacao_com_repeticao(double n, double values[], double values_size)
 {
     double aux = 1;
-    for (double i = 0; i < values_size; i++)
+    for (int i = 0; i < values_size; i++)
     {
         aux *= fatorial(values[i]);
     }

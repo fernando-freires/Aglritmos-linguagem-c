@@ -5,7 +5,7 @@
 double fatorial(double n)
 {
     double result = 1;
-    for (double i = n; i > 1; i--)
+    for (int i = n; i > 1; i--)
         result *= i;
     return result;
 }

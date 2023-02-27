@@ -5,7 +5,7 @@
 double fatorial(double n)
 {
     double result = 1;
-    for (double i = n; i > 1; i--)
+    for (int i = n; i > 1; i--)
         result *= i;
     return result;
 }
@@ -19,7 +19,7 @@ double arranjo_simples(double n, double p)
 double arranjo_simples_alternativo(double n, double p)
 {
     double result = 1;
-    for (double i = 0; i < p; i++)
+    for (int i = 0; i < p; i++)
     {
         result *= n;
         n--;
