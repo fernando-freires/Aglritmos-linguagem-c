@@ -27,6 +27,11 @@ int permutacao_com_repeticao(int n, int values[], int values_size)
     return fatorial(n) / aux;
 }
 
+int permutacao_circular(int n)
+{
+    return fatorial(n - 1);
+}
+
 int main()
 {
     // permutação simples
@@ -38,4 +43,7 @@ int main()
     // tamanho do vetor acima
     int qnt = 3;
     permutacao_com_repeticao(6, values, qnt);
+
+    // permutacao circular
+    permutacao_circular(6);
 }
