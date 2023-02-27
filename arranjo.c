@@ -2,24 +2,24 @@
 #include <math.h>
 
 // Calcula o fatorial de n
-int fatorial(int n)
+double fatorial(double n)
 {
-    int result = 1;
-    for (int i = n; i > 1; i--)
+    double result = 1;
+    for (double i = n; i > 1; i--)
         result *= i;
     return result;
 }
 
 // calcula a formula -> n! / (n-p)!
-int arranjo_simples(int n, int p)
+double arranjo_simples(double n, double p)
 {
     return fatorial(n) / fatorial(n - p);
 }
 
-int arranjo_simples_alternativo(int n, int p)
+double arranjo_simples_alternativo(double n, double p)
 {
-    int result = 1;
-    for (int i = 0; i < p; i++)
+    double result = 1;
+    for (double i = 0; i < p; i++)
     {
         result *= n;
         n--;
@@ -28,12 +28,12 @@ int arranjo_simples_alternativo(int n, int p)
 }
 
 // calcula a formula n^p
-int arranjo_com_repeticao(int n, int p)
+double arranjo_com_repeticao(double n, double p)
 {
     return pow(n, p);
 }
 
-int main()
+double main()
 {
     // Arranjo de 4 itens, 3 a 3.
     arranjo_simples(4, 3);

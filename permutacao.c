@@ -2,24 +2,24 @@
 #include <math.h>
 
 // Calcula o fatorial de n
-int fatorial(int n)
+double fatorial(double n)
 {
-    int result = 1;
-    for (int i = n; i > 1; i--)
+    double result = 1;
+    for (double i = n; i > 1; i--)
         result *= i;
     return result;
 }
 
 // calcula a formula -> n!
-int permutacao_simples(int n)
+double permutacao_simples(double n)
 {
     return fatorial(n);
 }
 
-int permutacao_com_repeticao(int n, int values[], int values_size)
+double permutacao_com_repeticao(double n, double values[], double values_size)
 {
-    int aux = 1;
-    for (int i = 0; i < values_size; i++)
+    double aux = 1;
+    for (double i = 0; i < values_size; i++)
     {
         aux *= fatorial(values[i]);
     }
@@ -27,21 +27,21 @@ int permutacao_com_repeticao(int n, int values[], int values_size)
     return fatorial(n) / aux;
 }
 
-int permutacao_circular(int n)
+double permutacao_circular(double n)
 {
     return fatorial(n - 1);
 }
 
-int main()
+double main()
 {
     // permutação simples
     permutacao_simples(5);
 
     // permutação com repetição
     // quantidade de vezes que cada um dos valores se repete
-    int values[] = {3, 2, 1};
+    double values[] = {3, 2, 1};
     // tamanho do vetor acima
-    int qnt = 3;
+    double qnt = 3;
     permutacao_com_repeticao(6, values, qnt);
 
     // permutacao circular
